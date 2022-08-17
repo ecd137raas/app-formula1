@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 - Results</title>
+</head>
+<body class="body">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="data:image/png;base64,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" alt="" width="30" height="24">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/results">Resultados</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/drivers">Pilotos</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class="infinite">
+        <div class="shadow"></div>
+    </div>
+    <main>
+        <div class="container-fluid">
+            <h2>Resultado da útima corrida</h2>
+            <h5>Temporada <%= res.MRData.RaceTable.season %> </h5>
+                
+            <% const races = res.MRData.RaceTable.Races %>
+                <% races.forEach(function(races){ %>
+                <h5><%=races.raceName%></h5>
+        </div>
+        <div class="container-fluid">
+            <table class="table">
+                <tr>
+                    <th>Posição</th>
+                    <th>Grid Largada</th>
+                    <th>Carro</th>
+                    <th>Piloto</th>
+                    <th>Equipe</th>
+                </tr>
+                <% for (var i = 0; i < races.Results.length; i++) {%>
+                <tr>
+                    <td><%=races.Results[i].position%></td>
+                    <td><%=races.Results[i].grid%></td>
+                    <td><%=races.Results[i].number%></td> 
+                    <td><%=races.Results[i].Driver.givenName%> <%=races.Results[i].Driver.familyName%> </td> 
+                    <td><%=races.Results[i].Constructor.name%></td>
+                </tr>
+                <%} %>
+            </table>
+            </div>    
+        <%});%>
+
+    </main>
+    
+</body>
+</html>
