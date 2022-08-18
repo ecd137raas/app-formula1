@@ -26,7 +26,7 @@
                     <a class="nav-link" href="/results">Resultados</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/drivers">Pilotos</a>
+                    <a class="nav-link" href="/constructors">Ranking Construtores</a>
                   </li>
                 </ul>
               </div>
@@ -34,9 +34,39 @@
           </nav>
     </header>
     <main>
-       <h1>Pilotos</h1>
-       <h2>Pilotos da temporada de 2022</h2>
+      <div class="container-fluid">
+        <div class="card">
+          <div class="card-body">
+            <h3>Ranking Construtores</h3>
+          </div>
+        </div>
+      </div>
+      <% const construct = res.MRData.StandingsTable.StandingsLists %>
+        <% construct.forEach(function(construct){ %>
+          <div class="container-fluid">
+            <table class="table">
+              <tr class="table-secondary">
+                  <th>Posição</th>
+                  <th>Pontos</th>
+                  <th>Vitórias</th>
+                  <th>Equipe</th>
+                  <th>Nacionalidade</th>
+              </tr>
+
+              <% for(var i = 0; i < construct.ConstructorStandings.length; i++){%>
+                <tr>
+                  <td><%=construct.ConstructorStandings[i].position%></td>
+                  <td><%=construct.ConstructorStandings[i].points%></td>
+                  <td><%=construct.ConstructorStandings[i].wins%></td>
+                  <td><%=construct.ConstructorStandings[i].Constructor.name%></td>
+                  <td><%=construct.ConstructorStandings[i].Constructor.nationality%></td>
+                  
+              </tr>
+              <%}%>
+            </table>
+          </div>
+        <%});%>
     </main>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>

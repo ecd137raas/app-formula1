@@ -26,7 +26,7 @@
                     <a class="nav-link" href="/results">Resultados</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/drivers">Pilotos</a>
+                    <a class="nav-link" href="/constructors">Ranking Construtores</a>
                   </li>
                 </ul>
               </div>
@@ -38,16 +38,19 @@
     </div>
     <main>
         <div class="container-fluid">
-            <h2>Resultado da útima corrida</h2>
-            <h5>Temporada <%= res.MRData.RaceTable.season %> </h5>
-                
-            <% const races = res.MRData.RaceTable.Races %>
-                <% races.forEach(function(races){ %>
-                <h5><%=races.raceName%></h5>
+            <div class="card">
+                <div class="card-body">
+                    <h3>Resultado da útima corrida</h3>
+                    <h6>Temporada <%= res.MRData.RaceTable.season %> </h6>
+                    <% const races = res.MRData.RaceTable.Races %>
+                        <% races.forEach(function(races){ %>
+                        <h6><%=races.raceName%></h6>
+                </div>
+              </div>  
         </div>
         <div class="container-fluid">
             <table class="table">
-                <tr>
+                <tr class="table-secondary">
                     <th>Posição</th>
                     <th>Grid Largada</th>
                     <th>Carro</th>
@@ -68,6 +71,6 @@
         <%});%>
 
     </main>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>

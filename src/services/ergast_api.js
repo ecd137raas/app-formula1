@@ -9,3 +9,13 @@ exports.getResults = async function () {
     }
     
 }
+
+exports.getConstructors = async function () {
+    try{
+        const response = await axios.get('http://ergast.com/api/f1/current/constructorStandings.json')
+        return response.data
+    }catch(error){
+        console.log(error)
+    }
+    
+}

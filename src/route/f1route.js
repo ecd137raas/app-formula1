@@ -12,8 +12,9 @@ router.get('/results', async function(req, res){
     res.render('results', {res:response})
 })
 
-router.get('/drivers', function(req, res){
-    res.render('drivers')
+router.get('/constructors', async function(req, res){
+    const response = await service.getConstructors()
+    res.render('constructors', {res:response})
 })
 
 module.exports = router
