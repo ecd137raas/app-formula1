@@ -40,14 +40,13 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <h3>Ranking de Construtores</h3>
+            <h3>Ranking de Pilotos</h3>
           </div>
         </div>
       </div>
       <br>
-      <% const construct = res.MRData.StandingsTable.StandingsLists %>
-        <% construct.forEach(function(construct){ %>
-          
+      <% const driverstan = res.MRData.StandingsTable.StandingsLists %>
+        <% driverstan.forEach(function(driverstan){ %>
               <div class="container-fluid">
                 <div class="card">
                   <div class="card-body">
@@ -56,17 +55,15 @@
                             <th>Posição</th>
                             <th>Pontos</th>
                             <th>Vitórias</th>
-                            <th>Equipe</th>
-                            <th>Nacionalidade</th>
+                            <th>Piloto</th>
                         </tr>
 
-                        <% for(var i = 0; i < construct.ConstructorStandings.length; i++){%>
+                        <% for(var i = 0; i < driverstan.DriverStandings.length; i++){%>
                           <tr>
-                            <td><%=construct.ConstructorStandings[i].position%></td>
-                            <td><%=construct.ConstructorStandings[i].points%></td>
-                            <td><%=construct.ConstructorStandings[i].wins%></td>
-                            <td><%=construct.ConstructorStandings[i].Constructor.name%></td>
-                            <td><%=construct.ConstructorStandings[i].Constructor.nationality%></td>
+                            <td><%=driverstan.DriverStandings[i].position%></td>
+                            <td><%=driverstan.DriverStandings[i].points%></td>
+                            <td><%=driverstan.DriverStandings[i].wins%></td>
+                            <td><%=driverstan.DriverStandings[i].Driver.givenName%> <%=driverstan.DriverStandings[i].Driver.familyName%></td>
                             
                         </tr>
                         <%}%>

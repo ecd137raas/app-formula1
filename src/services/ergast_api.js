@@ -19,3 +19,13 @@ exports.getConstructors = async function () {
     }
     
 }
+
+exports.getDriverStandings = async function () {
+    try{
+        const response = await axios.get('http://ergast.com/api/f1/current/driverStandings.json')
+        return response.data
+    }catch(error){
+        console.log(error)
+    }
+    
+}
