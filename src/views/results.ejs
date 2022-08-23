@@ -23,13 +23,13 @@
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/results">Útima corrida</a>
+                    <a class="nav-link" href="/results">Race Results</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/driverstandings">Ranking Pilotos</a>
+                    <a class="nav-link" href="/driverstandings">Driver Standings</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/constructors">Ranking Construtores</a>
+                    <a class="nav-link" href="/constructors">Constructors Standings</a>
                   </li>
                 </ul>
               </div>
@@ -43,8 +43,8 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-body">
-                    <h3>Resultado da útima corrida</h3>
-                    <h6>Temporada <%= res.MRData.RaceTable.season %> </h6>
+                    <h3>Race Results</h3>
+                    <h6>Season <%= res.MRData.RaceTable.season %> </h6>
                     <% const races = res.MRData.RaceTable.Races %>
                         <% races.forEach(function(races){ %>
                         <h6><%=races.raceName%></h6>
