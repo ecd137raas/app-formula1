@@ -19,7 +19,7 @@ router.get('/constructors', async function(req, res){
 
 router.get('/driverstandings', async function(req, res){
     const response = await service.getDriverStandings()
-    res.render('driverstandings', {res:response})
+    res.render('drivers', {res:response})
 })
 
 module.exports = router

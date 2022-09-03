@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Standings</title>
+    <title>Results F1 | Drivers</title>
 </head>
 <body>
     <header>
@@ -22,29 +22,32 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                   </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/results">Race Results</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/driverstandings">Driver Standings</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/constructors">Constructors Standings</a>
-                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/results">Last Race</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/driverstandings">Drivers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/constructors">Constructor</a>
+                  </li>
                 </ul>
               </div>
             </div>
           </nav>
     </header>
-    <main>
-      <div class="container-fluid">
-        <div class="card">
-          <div class="card-body">
-            <h3>Driver Standings</h3>
+    <main> 
+      <div class="container" style="display:flexbox">
+        <div class="row justify-content-center">
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3>Drivers</h3>
+                <h5>2022 Drivers Standings</h5>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <br>
+      <p>
       <% const driverstan = res.MRData.StandingsTable.StandingsLists %>
         <% driverstan.forEach(function(driverstan){ %>
               <div class="container-fluid">
