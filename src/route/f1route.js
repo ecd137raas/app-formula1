@@ -3,23 +3,24 @@ const service = require('../services/ergast_api')
 
 const router = express.Router()
 
-router.get('/', function(req, res){
-    res.render('home')
+router.get('/', async function (req, res) {
+    const response = await service.getSchedule()
+    res.render('home', { res: response })
 })
 
-router.get('/results', async function(req, res){
+router.get('/results', async function (req, res) {
     const response = await service.getResults()
-    res.render('results', {res:response})
+    res.render('results', { res: response })
 })
 
-router.get('/constructors', async function(req, res){
+router.get('/constructors', async function (req, res) {
     const response = await service.getConstructors()
-    res.render('constructors', {res:response})
+    res.render('constructors', { res: response })
 })
 
-router.get('/driverstandings', async function(req, res){
+router.get('/driverstandings', async function (req, res) {
     const response = await service.getDriverStandings()
-    res.render('drivers', {res:response})
+    res.render('drivers', { res: response })
 })
 
 module.exports = router

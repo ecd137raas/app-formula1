@@ -46,6 +46,24 @@
     <div class="text-center">
       <img src="/assets/img2.png" class="img-fluid" alt="img">
     </div>
+    <% const dateNow=new Date().toISOString().slice(0, 10) %>
+      <% const schedule=res.MRData.RaceTable.Races %>
+        <% schedule.forEach(function(schedule){ %>
+          <% if (schedule.date>= dateNow) {%>
+            <% let datas=schedule.date%>
+              <% let month=datas.toString().substr(4,3).replace('-','') %>
+                <% let day=datas.toString().substr(8,10).replace('-','')%>
+                  <div class="text-center">
+                    <h3>
+                      <%=schedule.Circuit.Location.country%>
+                    </h3>
+                    <h6>
+                      <%=day%>
+                        <%=month%>
+                    </h6>
+                  </div>
+                  <%}%>
+                    <%});%>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
