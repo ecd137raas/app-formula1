@@ -74,15 +74,15 @@
         </div>
       </div>
       <p></p>
+
       <div class="row justify-content-center">
         <div class="col">
           <div class="card">
             <div class="card-body">
               <table class="table table-hover table-responsive">
                 <tr class="table-secondary">
-                  <th>Number</th>
-                  <th>Grid</th>
                   <th>Position</th>
+                  <th>Grid</th>
                   <th>Driver</th>
                   <th>Status</th>
                   <th>Team</th>
@@ -90,17 +90,14 @@
                 <% for (var i=0; i < races.Results.length; i++) {%>
                   <tr>
                     <td>
-                      <%=races.Results[i].number%>
+                      <%=races.Results[i].position%>
                     </td>
                     <td>
                       <%=races.Results[i].grid%>
                     </td>
                     <td>
-                      <%=races.Results[i].position%>
-                    </td>
-                    <td>
                       <%=races.Results[i].Driver.givenName%>
-                        <%=races.Results[i].Driver.familyName%>
+                        <%=races.Results[i].Driver.familyName%> - <%=races.Results[i].number%>
                     </td>
                     <td>
                       <%=races.Results[i].status%>

@@ -51,19 +51,19 @@
         <% schedule.forEach(function(schedule){ %>
           <% if (schedule.date>= dateNow) {%>
             <% let datas=schedule.date%>
-              <% let month=datas.toString().substr(4,3).replace('-','') %>
-                <% let day=datas.toString().substr(8,10).replace('-','')%>
-                  <div class="text-center">
-                    <h3>
-                      <%=schedule.Circuit.Location.country%>
-                    </h3>
-                    <h6>
-                      <%=day%>
-                        <%=month%>
-                    </h6>
-                  </div>
-                  <%}%>
-                    <%});%>
+              <% let month=datas.toString().substr(4,3).replace('-','/')%>
+                <% let day=datas.toString().substr(8,9)%>
+                  <% let datefinal=day.concat(month)%>
+                    <div class="text-center">
+                      <h3>
+                        <%=schedule.Circuit.Location.country%>
+                      </h3>
+                      <h6>
+                        <%=datefinal%>
+                      </h6>
+                    </div>
+                    <%}%>
+                      <%});%>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
@@ -73,10 +73,7 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-6D7DP5LDVD');
-  </script>
+    gtag(' js', new Date()); gtag('config', 'G-6D7DP5LDVD'); </script>
 </body>
 
 </html>
