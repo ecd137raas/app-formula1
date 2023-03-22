@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.get('/', async function (req, res) {
     const response = await service.getSchedule()
-    res.render('home', { res: response })
+    res.render('index', { res: response })
 })
 
 router.get('/results', async function (req, res) {
