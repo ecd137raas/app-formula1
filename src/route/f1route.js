@@ -20,3 +20,4 @@ router.get('/driverstandings', async function (req, res) {
     res.render('drivers', { res: response })
 })
 module.exports = router
+
