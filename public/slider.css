@@ -1,0 +1,52 @@
+/* Estilos principais para o container do slider */
+.slider-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    background-color: rgb(0, 0, 0,1);
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para os itens dentro do slider */
+  .slider-item {
+    display: inline-block;
+    width: 300px;
+    margin: 0 10px;
+    background-color: rgba(166,0,0,1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Botões de navegação (opcional) */
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 1000;
+  }
+  
+  .slider-button.left {
+    left: 10px;
+  }
+  
+  .slider-button.right {
+    right: 10px;
+  }
+  
+  .slider-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  
